@@ -2,6 +2,7 @@
   "name": "jupyter-starter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./build",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,9 +11,12 @@
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
+    "perfect-arrows": "^0.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "serve": "^14.2.0",
+    "styled-components": "^5.3.9",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -20,7 +24,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx,tsx,ts"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +52,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "@types/styled-components": "^5.1.26",
+    "gulp": "^4.0.2",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-replace": "^1.1.4",
+    "npm-watch": "^0.11.0"
   }
 }
