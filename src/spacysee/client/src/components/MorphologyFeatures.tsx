@@ -14,7 +14,13 @@ export default function MorphologyFeatures({ token, setIframeSrc }: IProps) {
         <Styled.MorphContainer>
             {token.morph.split("|").map((morph: any) => {
                 // the morph attributes arrive like Prs_pron
-                let [abbreviation, value] = morph.split("_");
+                let abbreviation: string = "";
+                let value: string = "";
+                if (morph.includes("_")) {
+                    [abbreviation, value] = morph.split("_");
+                } else if (morph.includes("=")) {
+                    [abbreviation, value] = morph.split("=");
+                }
                 // make sure it is e.g. Pron and not pron
                 value = transformFeatureValue(value);
                 const options = abbreviationToMorphOptions[abbreviation];

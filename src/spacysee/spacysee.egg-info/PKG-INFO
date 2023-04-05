@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: spacysee
+Version: 0.0.3
+Summary: Visualizer for spaCy NER models
+Author: Matthew Oxley
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# SpacySee
+
+A project the helps you visualize your Spacy docs in Jupyter notebooks

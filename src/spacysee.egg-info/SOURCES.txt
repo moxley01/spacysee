@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/spacysee.egg-info/PKG-INFO
+src/spacysee.egg-info/SOURCES.txt
+src/spacysee.egg-info/dependency_links.txt
+src/spacysee.egg-info/top_level.txt

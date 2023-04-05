@@ -1,10 +1,12 @@
+from IPython.display import HTML, display
 import json
 import html
-from IPython.display import IFrame, HTML, display
-from spacy.tokens import Doc
 import requests
+import os
 
 url = "http://localhost:3000"
+
+build_dir = os.path.join(os.path.dirname(__file__), 'client', 'build')
 
 def render(doc: any, width=500, height=300, dev=False):
     data = {"sentences": get_sentences(doc), "language": doc.lang_}
@@ -16,7 +18,7 @@ def render(doc: any, width=500, height=300, dev=False):
 
 def display_prod(data: list, width: int, height: int):
     # read the text content of build/index.html
-    with open("./client/build/index.html", "r") as f:
+    with open(os.path.join(build_dir, 'index.html'), 'r') as f:
         markup = f.read()
 
     js_code = """
@@ -51,7 +53,7 @@ def display_dev(data: list, width: int, height: int):
         print(f"Error fetching {url}. Status code: {response.status_code}")
 
 
-def get_sentences(doc: Doc):
+def get_sentences(doc: any):
     sentences = []
     for sentence_id, sentence in enumerate(doc.sents):
         tokens = []
