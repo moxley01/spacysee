@@ -29,7 +29,7 @@ Each of the dependency tags, POS tags and morphological features are clickable. 
 
 ## What did I learn whilst building this?
 
-- The `srcdoc` attribute of an iframe (prevents the need for a server)
+- The `srcdoc` attribute of an iframe (prevents the need for a server, and allows concatenation of arbitrary script tags that can run in the context of the iframe)
 - The `HtmlInlineScriptPlugin` for bundling CRA output into a single HTML file
 - The `<base/>` tag (for setting the base URL for relative links)
 - Using `setuptools` to build and deploy a Python package (including package_data)
