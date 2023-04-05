@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="spacysee",
-    version="0.0.3",
+    version="0.0.4",
     author="Matthew Oxley",
     description="Visualizer for spaCy NER models",
     long_description=long_description,
