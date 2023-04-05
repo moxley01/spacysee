@@ -1,18 +1,12 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
 import "./App.css";
-import { StateProvider } from "./State";
-import Content from "./Content";
-import {defaultTheme} from "./theme";
+import { useStateValue } from "./State";
+import Visualizer from "./components/Visualizer";
 
 function App() {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-        <StateProvider>
-          <Content></Content>
-        </StateProvider>
-    </ThemeProvider>
-  );
+    const { state } = useStateValue();
+
+    return <Visualizer sentences={state.sentences} />;
 }
 
 export default App;
