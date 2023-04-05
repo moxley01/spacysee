@@ -21,7 +21,7 @@ render(doc, width="500", height="500")
 
 ## Example
 
-![Example](https://raw.githubusercontent.com/moxley01/spacy-visualizer/master/screenshot.png)
+![Example](https://raw.githubusercontent.com/moxley01/spacysee/master/screenshot.png)
 
 ## Notes
 
