@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     include_package_data=True,
-    packages=["client/build"],
+    packages=["client/build"], # this is crucial in order for the following line to work
     package_data={'client/build': ['*.html']},
     classifiers=[
         "Programming Language :: Python :: 3",
