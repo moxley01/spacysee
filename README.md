@@ -33,3 +33,34 @@ Each of the dependency tags, POS tags and morphological features are clickable. 
 - The `HtmlInlineScriptPlugin` for bundling CRA output into a single HTML file
 - The `<base/>` tag (for setting the base URL for relative links)
 - Using `setuptools` to build and deploy a Python package (including package_data)
+
+## Development
+
+To contribute to this project, clone the repo and run the following commands:
+
+```bash
+cd src/spacysee/client && npm start
+```
+
+This will run the CRA development server on port 3000. Then you can use SpacySee in dev mode by passing the `dev` argument to the `render` function:
+
+```python
+from spacysee import render
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("This is a neat way to visualize your Spacy docs")
+
+render(doc, dev=True)
+```
+
+To deploy your changes, first build the CRA app:
+
+```bash
+cd src/spacysee/client && npm run build
+```
+
+If you have PyPi permissions for the package, run the following command to build and deploy:
+
+```bash
+python setup.py sdist bdist_wheel && twine upload dist/*
+```
