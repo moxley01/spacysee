@@ -16,7 +16,7 @@ def render(doc: any, width=500, height=300, dev=False):
 
 def display_prod(data: list, width: int, height: int):
     # read the text content of build/index.html
-    with open("./build/index.html", "r") as f:
+    with open("./client/build/index.html", "r") as f:
         markup = f.read()
 
     js_code = """
