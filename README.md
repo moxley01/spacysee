@@ -1,6 +1,6 @@
 # SpacySee
 
-A project that helps you visualize your Spacy docs in Jupyter notebooks
+A project that helps you visualize your spaCy docs in Jupyter notebooks
 
 ## Installation
 
@@ -11,6 +11,7 @@ pip install spacysee
 ## Usage
 
 ```python
+import spacy
 from spacysee import render
 
 nlp = spacy.load("en_core_web_sm")
@@ -45,6 +46,7 @@ cd src/spacysee/client && npm start
 This will run the CRA development server on port 3000. Then you can use SpacySee in dev mode by passing the `dev` argument to the `render` function:
 
 ```python
+import spacy
 from spacysee import render
 
 nlp = spacy.load("en_core_web_sm")
