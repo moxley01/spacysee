@@ -1,3 +1,5 @@
+Update 23/5/2023: this project is now an official part of [spaCy universe](https://spacy.io/universe/project/spacysee) !
+
 # SpacySee
 
 A project that helps you visualize your spaCy docs in Jupyter notebooks
